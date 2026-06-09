@@ -49,6 +49,15 @@ Restaurant dataset containing approximately 188,329 records.
 ### Reports
 ![Reports](screenshots/reports.png)
 
+### Add Restaurants
+![Add Restaurants](screenshots/add_restaurants.png)
+
+### Search
+![Search](screenshots/search.png)
+
+### Restaurants
+![Restaurants](screenshots/restaurants.png)
+
 ## Author
 
 Ishita Saxena
