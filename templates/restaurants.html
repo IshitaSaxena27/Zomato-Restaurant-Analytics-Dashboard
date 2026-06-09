@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+    <h1>Restaurant Management</h1>
+</div>
+
+<div class="table-container">
+
+    <table class="table table-hover">
+
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Votes</th>
+                <th>Cost</th>
+                <th>Type</th>
+                <th>Online Order</th>
+                <th>Book Table</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for restaurant in restaurants %}
+
+            <tr>
+
+                <td>{{ restaurant.id }}</td>
+                <td>{{ restaurant.name }}</td>
+                <td>{{ restaurant.rate }}</td>
+                <td>{{ restaurant.votes }}</td>
+                <td>₹{{ restaurant.cost }}</td>
+                <td>{{ restaurant.restaurant_type }}</td>
+                <td>{{ restaurant.online_order }}</td>
+                <td>{{ restaurant.book_table }}</td>
+
+                <td>
+
+                    <a
+                    href="/delete/{{ restaurant.id }}"
+                    class="btn btn-danger btn-sm">
+
+                    Delete
+
+                    </a>
+
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}

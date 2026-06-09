@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="dashboard-header">
+
+```
+<div>
+
+    <h1 class="page-title">
+        Business Intelligence Reports
+    </h1>
+
+    <p class="subtitle">
+        Advanced Restaurant Performance Analysis
+    </p>
+
+</div>
+```
+
+</div>
+
+<div class="row g-4">
+
+```
+<div class="col-md-6">
+
+    <div class="table-container">
+
+        <h3 class="mb-4">
+            🏆 Top Rated Restaurants
+        </h3>
+
+        <table class="table table-hover">
+
+            <thead>
+
+                <tr>
+
+                    <th>Restaurant</th>
+                    <th>Rating</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for r in top_restaurants %}
+
+                <tr>
+
+                    <td>
+                        {{ r.name }}
+                    </td>
+
+                    <td>
+                        ⭐ {{ r.rate }}
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<div class="col-md-6">
+
+    <div class="table-container">
+
+        <h3 class="mb-4">
+            💰 Best Value Restaurants
+        </h3>
+
+        <table class="table table-hover">
+
+            <thead>
+
+                <tr>
+
+                    <th>Restaurant</th>
+                    <th>Value Score</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for r in best_value %}
+
+                <tr>
+
+                    <td>
+                        {{ r.name }}
+                    </td>
+
+                    <td>
+
+                        {{ "%.4f"|format(
+                        r.value_score
+                        ) }}
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+<div class="row mt-4">
+
+```
+<div class="col-md-12">
+
+    <div class="top-restaurant">
+
+        <h4>
+            📊 Report Summary
+        </h4>
+
+        <p style="margin-top:15px; line-height:1.8;">
+
+            This report analyzes restaurant performance using customer ratings,
+            popularity metrics, value scores, and recommendation intelligence.
+            The system evaluates more than 188,000 restaurant records to identify
+            top-performing restaurants and high-value dining options.
+
+        </p>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="page-title">
+
+AI Restaurant Recommendation
+
+</h1>
+
+<div class="search-box">
+
+<form method="POST">
+
+<div class="row">
+
+<div class="col-md-4">
+
+<label>Budget</label>
+
+<input
+type="number"
+name="budget"
+class="form-control"
+placeholder="Enter Budget"
+required>
+
+</div>
+
+<div class="col-md-4">
+
+<label>Restaurant Type</label>
+
+<select
+name="restaurant_type"
+class="form-control">
+
+<option>Dining</option>
+<option>Cafes</option>
+<option>Buffet</option>
+<option>Delivery</option>
+
+</select>
+
+</div>
+
+<div class="col-md-4 d-flex align-items-end">
+
+<button
+type="submit"
+class="btn btn-success w-100">
+
+Get AI Recommendation
+
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+{% if recommendations %}
+
+<div class="row mt-4">
+
+{% for r in recommendations %}
+
+<div class="col-md-4">
+
+<div class="recommend-card">
+
+<h3>{{ r.name }}</h3>
+
+<p>
+⭐ Rating:
+<b>{{ r.rate }}</b>
+</p>
+
+<p>
+🗳 Votes:
+<b>{{ r.votes }}</b>
+</p>
+
+<p>
+💰 Cost:
+<b>₹{{ r.cost }}</b>
+</p>
+
+<p>
+🍽 Type:
+<b>{{ r.restaurant_type }}</b>
+</p>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endif %}
+
+{% endblock %}
