@@ -35,6 +35,29 @@ The project analyzes 188,000+ restaurant records and transforms raw restaurant d
 
 Restaurant dataset containing approximately 188,329 records.
 
+## Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Login Page
+![Login](screenshots/login.png)
+
+### Recommendations
+![Recommendations](screenshots/recommendation.png)
+
+### Reports
+![Reports](screenshots/reports.png)
+
+### Add Restaurants
+![Add Restaurants](screenshots/add_restaurants.png)
+
+### Search
+![Search](screenshots/search.png)
+
+### Restaurants
+![Restaurants](screenshots/restaurants.png)
+
 ## Author
 
 Ishita Saxena
