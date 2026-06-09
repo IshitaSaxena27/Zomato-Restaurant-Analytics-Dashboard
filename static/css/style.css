@@ -341,6 +341,28 @@ img.img-fluid{
 
 .table tbody tr:hover{
 
-    background:#fff5f5;
+    background:#e58c8c;
 
+}
+
+/* RESPONSIVE CHARTS */
+
+.chart-box{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    height:100%;
+    transition:0.3s;
+}
+
+.chart-box img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.chart-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
 }
